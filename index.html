@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Learn JQuery</title>
+        <link rel="icon" href="jquery.png" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="materialize.min.css">
+        <script type="text/javascript" src="jquery.min.js"> </script>
+        <script src="materialize.min.js"></script>
+        <style>
+            p{
+                font-size: 18px;
+            }
+            hr{
+                border-top: 5px solid gray;
+            }
+            .panel p, .panelDn p, .panelUp p, .autoPanel p {
+                margin: 5px 15px 5px 15px;
+                text-align: justify;
+            }
+            #square, #incSize, #lefSize{
+                width: 100px;
+                height: 10px;
+                background-color: red;
+                margin-top: 1%;
+                position: absolute;
+            }
+            #lefSize{
+                text-align: center;
+                height: 30px;
+                color:white;
+            }
+            .autoPanel, .panelDn, .panelUp{
+                background: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h5>Make text Disappear</h5>
+        <div class="row jumbotron"  >
+            <div class="container first">
+                <p>If you click on me, I will disappear.</p>
+                <p>Click me away!</p>
+                <p>Click me too!</p>                
+            </div>
+            <div class="container">
+                <p id="dblclk">If you don't want me, click me twice.</p>                
+            </div>
+        </div><hr>
+        <h5>Hide on Button Click</h5>
+        <div class="row jumbotron"  >
+            <div class="container second">
+                <button id="button1" class="btn waves-light waves-effect">Hide Paragraph</button><br><br>
+                <p>If you click on me, I will disappear.</p>
+                <p>Click me away!</p>
+                <p>Click me too!</p>
+            </div>            
+        </div><hr>
+        <h5>Mouse Effect</h5>
+        <div class="row jumbotron"  >
+            <div class="container third">
+                <p id="mouseenter">Hover on me to make me look beautiful.</p>
+                <p id="mouseleave">Leave the mouse, to see alert message.</p>
+                <p id="mousedown">Click me with any button.</p>
+                <p id="mouseup">Click me but don't leave me.</p>
+                <p id="hover">Hover to see mouse enter and leave at same time.</p>
+            </div>            
+        </div><hr>
+        <h5>Focus and Blur and Click</h5>
+        <div class="row jumbotron"  >
+            <div class="container fourth">
+                <div class="input-field">
+                    <input id="name" type="text">
+                <label for="name">Name</label>
+                </div>
+                <p id="memlck">Focus, Blur and Click to see all three.</p>
+            </div>            
+        </div><hr>
+        <h5>Show or Hide Text</h5>
+        <div class="row jumbotron"  >
+            <div class="container fourth">
+                <div class="col s6">
+                    <button class="waves-effect waves-light btn" id="showb">Hide</button>
+                    <button class="waves-effect waves-light btn" id="hideb">Show</button>
+                    <p id="showt">You clicked show or hide button.</p>
+                </div>
+                <div class="col s6">
+                    <button class="waves-effect waves-light btn" id="toggleb">Show/Hide Text</button>
+                    <p id="togglep" style="display: none">
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                </div>
+            </div>            
+        </div><hr>
+        <h5>Fading Effect</h5>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="container fourth">
+                <div class="col s6">
+                    <button class="waves-effect waves-light btn" id="fadeoutB">Hide</button>
+                    <button class="waves-effect waves-light btn" id="fadeinB">Show</button>
+                    <p id="fadeiop1">You clicked show or hide button.</p>
+                    <p id="fadeiop2">You clicked show or hide button.</p>
+                    <p id="fadeiop3">You clicked show or hide button.</p>
+                </div>
+                <div class="col s6">
+                    <button class="waves-effect waves-light btn" id="togglefiob">Show/Hide Text</button>
+                    <p id="togglefiop1" style="display: none">
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                    <p id="togglefiop2" style="display: none">
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                    <p id="togglefiop3" style="display: none">
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                </div>                
+            </div>    
+            </div>
+            <div class="row">
+                <div class="container">
+                    <button class="waves-effect waves-light btn" id="fadetob">Fade Text</button>
+                    <p id="fadeto1">
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                    <p id="fadeto2">
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                    <p id="fadeto3">
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                </div>
+            </div>                    
+        </div><hr>
+        <h5>Slide Effect</h5>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="container">
+                    <p class="flip waves-effect waves-light btn" style="width:100%">Click to Toggle Panel</p>
+                    <div class="panel" style="display:none"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+                    <div class="col s6">
+                        <p class="flipDn waves-effect waves-light btn" style="width:100%">Click to Slide down</p>
+                        <div class="panelDn" style="display:none"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere sollicitudin odio hendrerit lobortis. Phasellus eu maximus enim. Phasellus vel enim vitae tellus interdum rhoncus. Fusce ornare lacus sit amet sem tincidunt pulvinar. Praesent lacinia, orci vitae tristique malesuada, est diam sollicitudin ligula, sit amet elementum tellus quam et massa.</p></div>                    
+                    </div>
+                    <div class="col s6">
+                        <p class="flipUp waves-effect waves-light btn" style="width:100%">Click to Slide Up</p>
+                        <div class="panelUp"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere sollicitudin odio hendrerit lobortis. Phasellus eu maximus enim. Phasellus vel enim vitae tellus interdum rhoncus. Fusce ornare lacus sit amet sem tincidunt pulvinar. Praesent lacinia, orci vitae tristique malesuada, est diam sollicitudin ligula, sit amet elementum tellus quam et massa.</p></div>
+                    </div>
+                    <p class="autoFlip waves-effect waves-light btn" style="width:100%">Click to Auto Toggle Panel</p>
+                    <div class="autoPanel"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+                </div>
+            </div>
+        </div>
+        <h5>Animate Effect</h5>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="">
+                    <button class="squareBtn waves-effect waves-light btn">Click to Move Right with increased size</button>
+                    <div id="square"></div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <div class="container">
+                <button class="incBtn waves-effect waves-light btn">Click to increase size and see animation</button>
+                <button class="stop waves-effect waves-light btn">Stop!</button>
+                <div id="incSize"></div>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <div class="container">
+                <button class="lefBtn waves-effect waves-light btn">Click to increase size of background and text</button>
+                <div id="lefSize">DEXTER</div>
+            </div>
+        </div><hr>
+        <h3>JQuery HTML</h3><br><br>
+        <h5>JQuery GET</h5>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <button id="textDetails" class="waves-effect waves-light btn">Get Text</button>
+                    <button id="htmlDetails" class="waves-effect waves-light btn">Get HTML</button>
+                    <p id="thDetails">My name is the name of <b>King</b>, and the name is <b>Alexander</b>.</p><hr><br>
+                    <button id="valueDetails" class="waves-effect waves-light btn">Get Link Address</button>
+                    <p><a href="https://www.google.com.np" id="getValue">Google Search</a></p><hr><br>
+                    <div class="input-field">
+                        <input type="text" id="enterVal" class="">
+                        <label for="enterVal">Write Anything</label>
+                    </div>
+                    <button class="waves-effect waves-light btn" id="displayVal">Show in alert the text you have written</button>
+                </div>
+            </div>
+        </div><hr>
+        <h5>JQuery Set</h5>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <button id="setText" class="waves-effect waves-light btn">Set Text</button><br><br>
+                    <p id="initText">This is default.</p><hr>                    
+                    <button id="setHtml" class="waves-effect waves-light btn">Set HTML</button><br><br>
+                    <p id="initHtml">I am Dexter.</p>
+                </div><hr><br>
+                <h5>Fill the Form</h5>
+                <div class="row">
+                    <div class="col s6">
+                    <div class="input-field">
+                        <input type="text" id="value1" placeholder="">
+                        <label for="value1">First Name</label>
+                    </div>                            
+                    </div>
+                    <div class="col s6">
+                        <div class="input-field">
+                            <input type="text" id="value2" placeholder="">
+                            <label for="value2">Last Name</label>
+                        </div>                            
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="value3" placeholder="">
+                        <label for="value3">Address</label>
+                    </div> 
+                </div>                           
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="value4" placeholder="">
+                        <label for="value4">Contact Number</label>
+                    </div>
+                </div>                            
+                <button class="waves-effect waves-light btn" id="defaultValue">Change / Add Your Default</button>
+            </div>
+        </div><hr>
+        <h5>JQuery Add</h5>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col s6">
+                        <button class="waves-effect waves-light btn" id="prependBText">Prepend Text</button>
+                        <button class="waves-effect waves-light btn" id="appendBText">Append Text</button>
+                        <p class="appendBiP">Text will be appended here.</p>
+                    </div>
+                    <div class="col s6">
+                         <button class="waves-effect waves-light btn" id="prependBList">Prepend List</button>
+                         <button class="waves-effect waves-light btn" id="appendBList">Append List</button>
+                         <ol class="appendBiLi">
+                             <li>Default List 1</li>
+                             <li>Default List 2</li>
+                         </ol>
+                    </div>
+                </div>
+                <div class="row addTxt">
+                    <button class="waves-effect waves-light btn" onclick="addText()">Append Text</button>
+                    <p>Click button and countless append will be continue.</p>
+                </div>
+            </div>
+        </div>
+<!--         JQuery Effects -->
+        <script>           
+            $(document).ready(function(){                
+                $('.first p').click(function(){
+                    $(this).hide();
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#dblclk").dblclick(function(){
+                    $(this).hide();
+                });
+            });           
+            
+            $(document).ready(function(){
+                $('button').click(function(){
+                    $('.second>p').hide();
+                });
+            });
+             
+            $(document).ready(function(){
+                $("#mouseenter").mouseenter(function(){
+                    alert("Hahaha! Just joking you enter on me and I alert you with the truth.");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#mouseleave").mouseleave(function(){
+                    alert("Yes, you did it.");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#mousedown").mousedown(function(){
+                    alert("Oh ouch! Why did you did that?");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#mouseup").mouseup(function(){
+                    alert("Click me again.");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#hover").hover(function(){
+                    alert("This is hover effect.");
+                },
+                    function(){
+                        alert("This is because you leave the mouse.");
+                    }
+                );
+            });
+            
+            $(document).ready(function(){
+                $("#name").focus(function(){
+                    $(this).css("background-color", "#cccccc");
+                });
+                $("#name").blur(function(){
+                    $(this).css("background-color", "yellow");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#memlck").on({
+                    mouseenter: function(){
+                        $(this).css("color","red");
+                    },
+                    mouseleave: function(){
+                        $(this).css("color","black");
+                    },
+                    click: function(){
+                        $(this).css("color","blue");
+                    }
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#showb").click(function(){
+                    $("#showt").hide(200);
+                });
+                $("#hideb").click(function(){
+                    $("#showt").show(200);
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#toggleb").click(function(){
+                    $("#togglep").toggle(300);
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#fadeoutB").click(function(){
+                    $("#fadeiop1").fadeOut();
+                    $("#fadeiop2").fadeOut("slow");
+                    $("#fadeiop3").fadeOut(2000);
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#fadeinB").click(function(){
+                    $("#fadeiop1").fadeIn();
+                    $("#fadeiop2").fadeIn("slow");
+                    $("#fadeiop3").fadeIn(2000);
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#togglefiob").click(function(){
+                    $("#togglefiop1").fadeToggle();
+                    $("#togglefiop2").fadeToggle("slow");
+                    $("#togglefiop3").fadeToggle(2000);
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#fadetob").click(function(){
+                    $("#fadeto1").fadeTo("slow",0.25);
+                    $("#fadeto2").fadeTo("slow",0.5);
+                    $("#fadeto3").fadeTo("slow",0.75);
+                });
+            });
+            
+            $(document).ready(function(){
+                $(".flipDn").click(function(){
+                    $(".panelDn").slideDown();
+                });
+            });
+            
+            $(document).ready(function(){
+                $(".flipUp").click(function(){
+                    $(".panelUp").slideUp();
+                });
+            });
+            
+            $(document).ready(function(){
+                $(".flip").click(function(){
+                    $(".panel").slideToggle();
+                });
+            });
+            
+            $(document).ready(function(){
+                $(".squareBtn").click(function(){
+                    $("#square").animate({
+                        right: '250px',
+                        width: '+=50px',
+                        height: '30px'                        
+                    });
+                });
+            });
+            
+            $(document).ready(function(){
+                $(".incBtn").click(function(){
+                    var btn = $("#incSize");
+                    btn.animate({width:'1000px'},"slow");
+                    btn.animate({height:'30px'},"slow");
+                    btn.animate({width:'100px'},"slow");
+                    btn.animate({height:'10px'},"slow");
+                    btn.animate({right:'60px'},"slow");
+                    btn.animate({left:'205px'},"slow");
+                });
+                $(".stop").click(function(){
+                    $("#incSize").stop(true);
+                });
+            });
+            
+            $(document).ready(function(){
+                $(".lefBtn").click(function(){
+                    var inc = $("#lefSize");
+                    inc.animate({width:'1000px'},"slow");
+                    inc.animate({letterSpacing:'150px',fontSize:'1.5em'},"slow");
+                });
+            });
+            
+            $(document).ready(function(){
+                $(".autoFlip").click(function(){
+                    $(".autoPanel").slideUp(600).slideDown(600).css("background-color","#26a69a","color","white");
+                });
+            });
+        </script>
+        
+        <!--JQuery HTML-->
+        <script>
+            $(document).ready(function(){
+                $("#textDetails").click(function(){
+                    alert("Text: " + $("#thDetails").text());
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#htmlDetails").click(function(){
+                    alert("HTML: " + $("#thDetails").html());
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#valueDetails").click(function(){
+                    alert($("#getValue").attr("href"));
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#displayVal").click(function(){
+                    alert("Text you wrote is: " + $("#enterVal").val());
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#setText").click(function(){
+                    $("#initText").text("This is now changed.");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#setHtml").click(function(){
+                    $("#initHtml").html("I am <b>Dexter</b>.");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#defaultValue").click(function(){
+                    $("#value1").val("Diwakar");
+                    $("#value2").val("Pandey");
+                    $("#value3").val("Dhapasi");
+                    $("#value4").val("9840056828");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#prependBText").click(function(){
+                    $(".appendBiP").prepend("<b>Prepended Text </b>");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#prependBList").click(function(){
+                    $(".appendBiLi").prepend("<li>Prepended List</li>");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#appendBText").click(function(){
+                    $(".appendBiP").append("<b>Appended Text </b>");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#appendBList").click(function(){
+                    $(".appendBiLi").append("<li>Appended List</li>");
+                });
+            });
+            
+            function addText(){
+                var txt1 = "<p>Hello Dexter</p>";
+                var txt2 = $("<p></p>").text("Hello Dexter");
+                var txt3 = document.createElement("p");
+                txt3.innerHTML = "Hello Dexter";
+                $(".addTxt").append(txt1, txt2, txt3);
+            }
+        </script>
+    </body>
+</html>
